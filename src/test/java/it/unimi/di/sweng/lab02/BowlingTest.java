@@ -51,7 +51,7 @@ public class BowlingTest {
         sameRoll(0, 17);
         assertThat(game.score()).isEqualTo(16);
   }
-/*
+
     @Test
    void notSpareGame() {
      // Il test deve simulare una partita in cui vengono colpiti 5 birilli due volte di seguito,
