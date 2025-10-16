@@ -38,7 +38,7 @@ public class BowlingTest {
         assertThat(game.score()).isEqualTo(20);
 
     }
-/*
+
     @Test
    void oneSpareGame() {
    // Il test deve simulare una partita (20 lanci) si fa uno spare

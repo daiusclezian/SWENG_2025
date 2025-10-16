@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="it.unimi.di.sweng.lab02.BowlingTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-10-16T22:22:38.616Z" hostname="DESKTOP-LMSNL9T" time="0.204">
+<testsuite name="it.unimi.di.sweng.lab02.BowlingTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-10-16T22:34:18.654Z" hostname="DESKTOP-LMSNL9T" time="0.232">
   <properties/>
-  <testcase name="allOnesGame()" classname="it.unimi.di.sweng.lab02.BowlingTest" time="0.199"/>
-  <testcase name="gutterGame()" classname="it.unimi.di.sweng.lab02.BowlingTest" time="0.003"/>
+  <testcase name="allOnesGame()" classname="it.unimi.di.sweng.lab02.BowlingTest" time="0.208"/>
+  <testcase name="gutterGame()" classname="it.unimi.di.sweng.lab02.BowlingTest" time="0.009"/>
+  <testcase name="oneSpareGame()" classname="it.unimi.di.sweng.lab02.BowlingTest" time="0.008"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

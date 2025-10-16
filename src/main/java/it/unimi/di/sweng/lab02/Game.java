@@ -29,9 +29,15 @@ public class Game implements Bowling{
     @Override
     public int score() {
         int sum = 0;
-        for(Frame f: rolls){
+        for (int i = 0; i < rolls.length; i++) {
+            Frame f = rolls[i];
+            if (f.isSpare()){
+                Frame next = rolls[i+1];
+                sum += next.first;
+            }
             sum += f.first + f.second;
         }
         return sum;
     }
+
 }
