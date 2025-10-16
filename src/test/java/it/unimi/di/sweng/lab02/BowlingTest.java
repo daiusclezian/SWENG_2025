@@ -75,7 +75,7 @@ public class BowlingTest {
         sameRoll(0, 16);
         assertThat(game.score()).isEqualTo(24);
   }
-/*
+
     @Test
    void notStrikeGame() {
      // Il test deve simulare una partita in cui vengono colpiti 10 birilli con il secondo tiro di un frame,
