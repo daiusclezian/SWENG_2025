@@ -28,7 +28,7 @@ public class BowlingTest {
         sameRoll(0, 20);
         assertThat(game.score()).isEqualTo(0);
     }
-/*
+
     @Test
     void allOnesGame() {
         // Il test deve simulare una partita (20 lanci) in cui in ogni lancio viene buttato giù
