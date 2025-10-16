@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="it.unimi.di.sweng.lab02.BowlingTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-10-16T22:19:37.071Z" hostname="DESKTOP-LMSNL9T" time="0.243">
+  <properties/>
+  <testcase name="gutterGame()" classname="it.unimi.di.sweng.lab02.BowlingTest" time="0.243"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

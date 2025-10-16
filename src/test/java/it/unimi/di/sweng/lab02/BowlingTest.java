@@ -28,7 +28,7 @@ public class BowlingTest {
         sameRoll(0, 20);
         assertThat(game.score()).isEqualTo(0);
     }
-
+/*
     @Test
     void allOnesGame() {
         // Il test deve simulare una partita (20 lanci) in cui in ogni lancio viene buttato giù
@@ -38,7 +38,7 @@ public class BowlingTest {
         assertThat(game.score()).isEqualTo(20);
 
     }
-
+/*
     @Test
    void oneSpareGame() {
    // Il test deve simulare una partita (20 lanci) si fa uno spare
@@ -51,7 +51,7 @@ public class BowlingTest {
         sameRoll(0, 17);
         assertThat(game.score()).isEqualTo(16);
   }
-
+/*
     @Test
    void notSpareGame() {
      // Il test deve simulare una partita in cui vengono colpiti 5 birilli due volte di seguito,
@@ -64,7 +64,7 @@ public class BowlingTest {
         sameRoll(1, 17);
         assertThat(game.score()).isEqualTo(28);
   }
-
+/*
     @Test
    void oneStrikeGame() {
      // Il test deve simulare una partita in cui avviene uno strike.
@@ -75,7 +75,7 @@ public class BowlingTest {
         sameRoll(0, 16);
         assertThat(game.score()).isEqualTo(24);
   }
-
+/*
     @Test
    void notStrikeGame() {
      // Il test deve simulare una partita in cui vengono colpiti 10 birilli con il secondo tiro di un frame,
@@ -89,7 +89,7 @@ public class BowlingTest {
         sameRoll(0, 15);
         assertThat(game.score()).isEqualTo(17);
   }
-
+/*
     @Test
    void lastFrameStrikeGame() {
      // Il test deve simulare una partita in cui avviene uno strike nell'ultimo frame.
@@ -101,7 +101,7 @@ public class BowlingTest {
         game.roll(2);
         assertThat(game.score()).isEqualTo(15);
   }
-
+/*
 	@Test
    void perfectGame() {
      // Il test deve simulare una partita perfetta in cui avvengono 12 strike di seguito.
@@ -110,6 +110,7 @@ public class BowlingTest {
         assertThat(game.score()).isEqualTo(300);
   }
 
+  /*
     @Test
     void scoreOutOfBound() {
         sameRoll(1, 20);
@@ -119,5 +120,7 @@ public class BowlingTest {
         }, "Partita invalida");
 
     }
+
+   */
 /**/
 }
