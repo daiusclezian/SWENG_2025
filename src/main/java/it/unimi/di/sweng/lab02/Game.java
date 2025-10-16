@@ -18,6 +18,10 @@ public class Game implements Bowling{
         if (currentRoll%2 == 0){
             rolls[currentFrame] = new Frame();
             rolls[currentFrame].first = pins;
+            if (pins == 10){
+                currentRoll++;
+                currentFrame++;
+            }
         }
         else{
             rolls[currentFrame].second = pins;
@@ -31,9 +35,16 @@ public class Game implements Bowling{
         int sum = 0;
         for (int i = 0; i < rolls.length; i++) {
             Frame f = rolls[i];
-            if (f.isSpare()){
+
+            if (f.isStrike()){
+                Frame next = rolls[i+1];
+                sum += next.first + next.second;
+                //Frame nextNext = rolls[i+2];
+                //sum += nextNext.first;
+            } else if (f.isSpare()){
                 Frame next = rolls[i+1];
                 sum += next.first;
+
             }
             sum += f.first + f.second;
         }

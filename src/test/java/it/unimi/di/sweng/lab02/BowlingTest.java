@@ -64,7 +64,7 @@ public class BowlingTest {
         sameRoll(1, 17);
         assertThat(game.score()).isEqualTo(28);
   }
-/*
+
     @Test
    void oneStrikeGame() {
      // Il test deve simulare una partita in cui avviene uno strike.
