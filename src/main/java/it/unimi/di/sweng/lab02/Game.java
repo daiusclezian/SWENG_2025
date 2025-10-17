@@ -24,7 +24,7 @@ public class Game implements Bowling{
         if (currentFrame == 10 && rolls[rolls.length-1].isStrike()){
             this.bonusRoll_1 = pins;
             currentFrame++;
-            currentRoll++; // questo per ora non serve
+            currentRoll += 2; // +2 per strike, +1 per spare
             return;
         }
 
@@ -52,25 +52,43 @@ public class Game implements Bowling{
     @Override
     public int score() {
         int sum = 0;
-        for (int i = 0; i < rolls.length-1; i++) {
+        for (int i = 0; i < rolls.length-2; i++) {
             Frame f = rolls[i];
 
             if (f.isStrike()){
                 Frame next = rolls[i+1];
-                sum += next.first + next.second;
-                //Frame nextNext = rolls[i+2];
-                //sum += nextNext.first;
+                sum += next.first;
+                if (next.isStrike()){
+                    Frame nextNext = rolls[i+2];
+                    sum += nextNext.first;
+                }else{
+                    sum += next.second; // il primo lo avevo già aggiunto prima
+                }
+
             } else if (f.isSpare()){
                 Frame next = rolls[i+1];
                 sum += next.first;
 
             }
-            sum += f.first + f.second;
+            sum += f.score();
         }
-        // avendo fatto il for fino al penultimo elemento, aggiungo l'ultimo
-        Frame lastRoll = rolls[rolls.length-1];
-        sum += lastRoll.first + lastRoll.second;
+        // avendo fatto il for fino al penultimo elemento, aggiungo penultimo e ultimo
+        Frame lastRoll = rolls[rolls.length-2];
+        Frame lastRoll2 = rolls[rolls.length-1];
+        sum += lastRoll.score() + lastRoll2.score();
+
+        // manca il caso in cui lo strike è il penultimo frame, devo aggiungere anche bonusRoll_1
+        if (lastRoll.isStrike()){
+            sum += bonusRoll_1;
+        }
+
+        if (bonusRoll_1 == 10){
+            sum += bonusRoll_2;
+        }
+
+        // aggiungo poi i 2 tiri bonus
         return sum + bonusRoll_1 + bonusRoll_2;
+        //return bonusRoll_1 + bonusRoll_2;
     }
 
 }

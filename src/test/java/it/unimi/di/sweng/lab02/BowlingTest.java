@@ -101,7 +101,7 @@ public class BowlingTest {
         game.roll(2);
         assertThat(game.score()).isEqualTo(15);
   }
-/*
+
 	@Test
    void perfectGame() {
      // Il test deve simulare una partita perfetta in cui avvengono 12 strike di seguito.
