@@ -89,7 +89,7 @@ public class BowlingTest {
         sameRoll(0, 15);
         assertThat(game.score()).isEqualTo(17);
   }
-/*
+
     @Test
    void lastFrameStrikeGame() {
      // Il test deve simulare una partita in cui avviene uno strike nell'ultimo frame.
